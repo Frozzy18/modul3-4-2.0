@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги — «Грация»</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="Грация" style="height: 40px;"></a>
+    <nav><a href="index.html">Главная</a><a href="services.html">Услуги</a></nav>
+  </header>
+
+  <section class="services">
+    <h1>Популярные услуги</h1>
+    <div class="cards">
+      <!-- Йога -->
+      <div class="card service-card">
+        <img src="img/yoga.jpg" alt="Йога">
+        <h3>Йога</h3>
+        <p class="price">от 600 руб.</p>
+        <p>Занятие включает силовые и растягивающие асаны, дыхательные упражнения, элементы медитации. Способствует укреплению всех групп мышц, повышает гибкость тела.</p>
+      </div>
+      <!-- -->
+      <div class="card service-card">
+        <img src="img/stretching.jpg" alt="Стретчинг">
+        <h3>Стретчинг</h3>
+        <p class="price">от 500 руб.</p>
+        <p>Комплекс упражнений, направленных на интенсивную растяжку связок, а также всех групп мышц, повышение их эластичности, чувствительности и тонуса.</p>
+      </div>
+      <!--  -->
+      <div class="card service-card">
+        <img src="img/jumping.jpg" alt="Джампинг">
+        <h3>Джампинг</h3>
+        <p class="price">от 650 руб.</p>
+        <p>Система кардиотренировок на минибатутах. Зажигательная музыка, интервалы прыжков и спринтов. Пульс остаётся высоким, а вы тратите много калорий.</p>
+      </div>
+      <!--  -->
+      <div class="card service-card">
+        <img src="img/pilates.jpg" alt="Пилатес">
+        <h3>Пилатес</h3>
+        <p class="price">от 560 руб.</p>
+        <p>Система упражнений, направленных на детальную проработку мышц тела, включая мелкие. Увеличение подвижности суставов, позвоночника и эластичности связок.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="calculator">
+    <h2>Калькулятор стоимости абонемента на месяц</h2>
+    <form id="calcForm">
+      <label>Услуга:
+        <select id="service">
+          <option value="">— Выберите услугу —</option>
+          <option value="yoga">Йога</option>
+          <option value="stretching">Стретчинг</option>
+          <option value="jumping">Джампинг</option>
+          <option value="pilates">Пилатес</option>
+        </select>
+      </label>
+      <label>Количество занятий:
+        <select id="count">
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8" selected>8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </label>
+      <fieldset>
+        <legend>Тариф</legend>
+        <label><input type="radio" name="tariff" value="1" checked> Выгодный</label>
+        <label><input type="radio" name="tariff" value="1"> Комфортный</label>
+        <label><input type="radio" name="tariff" value="1"> Усиленный</label>
+      </fieldset>
+      <p class="total">Итого: <strong id="total">0</strong> руб.</p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>г. Москва, ул. Спортивная, 15</p>
+    <p>Тел: +7(495)-123-45-67</p>
+    <p>Email: info@gracia.ru</p>
+  </footer>
+
+  <script src="js/calculator.js"></script>
+</body>
+</html>

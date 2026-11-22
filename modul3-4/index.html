@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фитнес-клуб «Грация»</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="Грация" style="height: 40px;">
+    </a>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Красота и сила — в движении</h1>
+    <p>Фитнес-клуб «Грация» — пространство для тела и духа</p>
+    <a href="booking.html" class="btn">Записаться на пробное занятие</a>
+  </section>
+
+  <section class="advantages">
+    <h2>Почему мы</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Профессионалы</h3>
+        <p>Мы – профессионалы с многолетним опытом работы в сфере фитнеса и оказания услуг.</p>
+      </div>
+      <div class="card">
+        <h3>Забота о клиенте</h3>
+        <p>Мы знаем потребности в фитнесе и прилагаем максимальные усилия для эффективного их удовлетворения.</p>
+      </div>
+      <div class="card">
+        <h3>Программа лояльности</h3>
+        <p>Сотрудничество с широким спектром компаний России позволяет нам предложить уникальную программу лояльности.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <h2>Отзывы</h2>
+    <div class="slider">
+      <button class="slider-btn prev" aria-label="Назад">◀</button>
+      <div class="slide active">«Отличный клуб! Тренеры внимательные, атмосфера заряжает» — Анна</div>
+      <div class="slide">«Хожу на йогу — результат заметен уже через месяц» — Дмитрий</div>
+      <div class="slide">«Удобное расположение и гибкие тарифы» — Елена</div>
+      <button class="slider-btn next" aria-label="Вперёд">▶</button>
+    </div>
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="services.html" class="btn-outline">Перейти к услугам →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>г. Москва, ул. Спортивная, 15</p>
+    <p>Тел: +7(495)-123-45-67</p>
+    <p>Email: info@gracia.ru</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let idx = 0;
+    function show(i) {
+      slides.forEach(s => s.classList.remove('active'));
+      idx = (i + slides.length) % slides.length;
+      slides[idx].classList.add('active');
+    }
+    document.querySelector('.next').onclick = () => show(idx + 1);
+    document.querySelector('.prev').onclick = () => show(idx - 1);
+    setInterval(() => show(idx + 1), 5000);
+  </script>
+</body>
+</html>

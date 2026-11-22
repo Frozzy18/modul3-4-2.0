@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Запись на пробное занятие — «Грация»</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="Грация" style="height: 40px;">
+    </a>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+    </nav>
+  </header>
+
+  <section class="booking">
+    <h1>Запись на пробное занятие</h1>
+    <form id="bookingForm" novalidate>
+      
+      <label>ФИО
+        <input type="text" id="fio" name="fio" placeholder="Иванов Иван Иванович">
+        <span class="error" id="err-fio"></span>
+      </label>
+      
+      <label>Телефон
+        <input type="tel" id="phone" name="phone" placeholder="+7(999)-123-45-67">
+        <span class="error" id="err-phone"></span>
+      </label>
+      
+      <label>Email
+        <input type="email" id="email" name="email" placeholder="mail@example.ru">
+        <span class="error" id="err-email"></span>
+      </label>
+      
+      <label>Услуга
+        <select id="serviceSelect" name="service">
+          <option value="">— Выберите услугу —</option>
+          <option value="Йога">Йога</option>
+          <option value="Стретчинг">Стретчинг</option>
+          <option value="Джампинг">Джампинг</option>
+          <option value="Пилатес">Пилатес</option>
+        </select>
+        <span class="error" id="err-service"></span>
+      </label>
+      
+      <label class="checkbox">
+        <input type="checkbox" id="policy" name="policy">
+        Согласен с политикой клуба
+        <span class="error" id="err-policy"></span>
+      </label>
+      
+      <button type="submit" class="btn">Записаться</button>
+      <p id="formMsg" class="form-msg"></p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>г. Москва, ул. Спортивная, 15</p>
+    <p>Тел: +7(495)-123-45-67</p>
+    <p>Email: info@gracia.ru</p>
+  </footer>
+
+  <script src="js/booking.js"></script>
+</body>
+</html>
